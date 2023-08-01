@@ -1,0 +1,25 @@
+﻿
+create database TelefonRehberi1
+go
+use TelefonRehberi1
+go
+create table Kullanici
+(
+ID uniqueidentifier primary key,
+KullaniciAdi nVarChar(20),
+Sifre nVarChar(20),
+)
+go
+insert into Kullanici (ID,KullaniciAdi,Sifre) values (NEWID(),'Demo','Demo')
+go
+create table Rehber
+(
+ID Uniqueidentifier primary key,
+Isim nVarChar(20),
+Soyisim nVarChar(20),
+GozukecekIsim nVarChar(40),
+TelefonNumarasi nVarChar(11),
+EMailAdres nVarChar(250),
+Adres nVarChar(250),
+Aciklama nVarChar(250),
+)
